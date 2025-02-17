@@ -1,0 +1,283 @@
+body {
+    background:lightseagreen;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(41, 41, 41);
+    font-size: 20px;
+}
+.input-container {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+}
+.form-row {
+    position: relative;
+    width: 100%;
+    border: 3px solid rgb(41, 41, 41);
+    border-radius: 5px;
+}
+.form-row input {
+    width: 100%;
+    padding: 16px 15px 10px 15px;
+    border-radius: 5px;
+    border: 2px solid rgb(41, 41, 41);
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+    color: rgb(41, 41, 41);
+}
+.form-row label {
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    background: lightseagreen;
+    padding: 2px 5px;
+    border-radius: 10px;
+    margin-top: -7px;
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(41, 41, 41);
+    transition: 0.3s ease;
+    pointer-events: none;
+}
+#item{
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: rgb(41,41,41);
+    border-radius: 5px; 
+    cursor: pointer;
+    padding: 15px;
+    margin-left: 10px;
+    font-size: 16px;
+}
+#item:hover{
+    background-color: rgb(152,251,203);
+}
+.form-row:hover{
+    background-color:rgb(152,251,203);
+}
+.add{
+    position: relative;
+    width: 100%;
+    color: lightseagreen;
+    border-radius: 10px; 
+    cursor: pointer;
+    padding: 5px;
+    background-color: rgb(41,41,41);
+    border:none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.add:hover {
+    background-color: rgb(60,60,60);
+}
+.add:active {
+    background-color: rgb(41, 41, 41);
+    transform: scale(0.95);
+}
+.btn{
+    width: 75px;
+    color: red;
+    border-radius: 5px; 
+    cursor: pointer;
+    margin-left: 10px;
+    background-color: transparent;
+    border:3px solid red;
+    font-size: 14px;
+    font-weight: 5px;
+    font-size: 14px;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn:hover {
+    background-color: red;
+    color: white;
+}
+.btn:active {
+    background-color: rgb(41, 41, 41);
+    transform: scale(0.95);
+}
+ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+.toggle-container {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    margin-bottom: 20px;
+    font-size: 18px;
+    margin-top: 10px;
+    gap: 5px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 25px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  left: 4px;
+  bottom: 1px;
+  background-color: rgb(41,41,41);
+  transition: 0.4s;
+}
+input:checked + .slider {
+  background-color: rgb(152,251,203);
+}
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+.checkBox input[type="checkbox"] {
+    margin-right: 15px;
+    transform: scale(2);
+  }
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Keep the list items in a column */
+  }
+  
+  .checkBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 5px;
+    border: 1px solid transparent;
+}
+
+.checkBox label {
+    flex-grow: 1; 
+}
+  
+  .prioritySelector {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    margin-left: 10px;
+    border-radius: 15px; /* Make buttons round */
+    cursor: pointer;
+    border: none;
+    background-color: white; /* Light background color */
+  }
+  
+  .prioritySelector button{
+    font-size: 14px;
+    padding: 8px 12px;
+    border: none;
+    background-color: transparent;
+    color: rgb(41, 41, 41); /* Set text color */
+    cursor: pointer;
+  }
+  
+  .priorityDropdown {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    background-color: white;
+    border: 1px transparent;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  .priorityDropdown li {
+    padding: 8px;
+    cursor: pointer;
+  }
+  .priorityDropdown li.selected {
+    background-color: rgb(152, 251, 203); /* Highlight selected item */
+  }
+
+  .priorityDropdown li:hover {
+    background-color: rgb(152,251,203);
+  }
+  
+  /* Highlight text based on priority */
+  .lowPriority {
+    color: red;
+  }
+  
+  .mediumPriority {
+    color: yellow;
+  }
+  
+  .highPriority {
+    color: blue;
+  }
+  .checkBox.lowPriority {
+    background-color: red;
+    color: white; 
+}
+
+.checkBox.mediumPriority {
+    background-color: rgb(225,173,1); 
+    color: white; 
+}
+
+.checkBox.highPriority {
+    background-color: blue; 
+    color: white; 
+}
+.manual-order-container {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    width: 100%; 
+    padding-left: 3px;
+}
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .active-button {
+    background-color: rgb(152,251,203);
+    color: rgb(41, 41, 41);
+    font-weight: bold;
+  }
+  
+  .inactive-button {
+    background-color: white;
+    color: rgb(41, 41, 41);
+    font-weight: bold;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
